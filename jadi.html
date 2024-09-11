@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio</title>
+    <style>
+        body {
+    background-color: black;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding: 50px;
+    width: 960px;
+    margin: 0 auto;
+}
+
+#container-utama {
+    
+}
+
+#header{
+    position:sticky;
+    top:0;
+    z-index:10;
+    background-color:white;
+    width:100%;
+}
+
+.tabel {
+    margin: 50px auto 100px auto;
+    padding: 100px auto; 
+    width: 100%;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.5s ease, max-height 0.5s ease;
+}
+
+#toggle-table:checked ~ .tabel {
+    opacity: 1;
+    max-height: 500px; 
+}
+
+#toggle-table {
+    display: none; 
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+h1 {
+    color: grey;
+    font-size: 3em;
+    margin-top: 100px;
+    cursor: pointer;
+}
+
+h2 {
+    font-size: 1.5em;
+    border: 2px solid black;
+    padding: 20px;
+    margin-top: 10px;
+    display: inline-block;
+    opacity:0;
+}
+
+table {
+    margin: 20px auto;
+    border-collapse: collapse;
+    width: 80%;
+}
+
+th, td {
+    border: 1px solid white;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: grey;
+    color: white;
+}
+
+img {
+    position: sticky;
+    top: 0;
+    background-color: black; 
+    padding: 10px;
+    width: 20%;
+    height: 100%;
+}
+
+tr:nth-child(even) {
+    background-color: #5c3d3d;
+}
+
+tr:nth-child(odd) {
+    background-color: #592b2b;
+}
+
+h1:hover + h2 {
+    color: white;
+    border: 2px solid white;
+    transition: opacity 0.5s ease, max-height 0.5s ease;
+    opacity:1;
+}
+
+    </style>
+</head>
+<body>
+    <div id="container-utama">
+        
+        <h1 id="header">Portfolio</h1>
+        
+        <div id="container-1">
+            <h1>Foto</h1>
+            <div id="foto">
+                <img src="media/gambar.jpg" alt="Foto Saya">
+            </div>
+        </div>
+    
+        <div id="container-2">
+            <h1>Nama</h1>
+            <h2>Gerti Armanda Sembiring</h2>
+        </div>
+        
+        <div id="container-3">
+            <h1>NIM</h1>
+            <h2>231401133</h2>
+        </div>
+        
+        <div id="container-4">
+            <h1>KOM</h1>
+            <h2>A</h2>
+        </div>
+        
+        <div id="container-5">
+            <h1>Hobi</h1>
+            <h2>Ngoding, Ngegame</h2>
+        </div>
+        
+        <div id="container-6">
+            <h1>Motto Hidup</h1>
+            <h2>Berani Membuat Kesalahan dan Berani Memperbaikinya</h2>
+        </div>
+        
+        <div id="container-7">
+            <h1>Perkenalan Singkat</h1>
+            <h2>Yo, Aku Adalah Seorang Mahasiswa Universitas Sumatera Utara Dengan Jurusan Ilmu Komputer Yang Makananan Sehari-harinya Adalah Komputer</h2>
+        </div>
+        
+        <div id="container-8">
+            <!-- Put checkbox and label outside the container that will be toggled -->
+            <input type="checkbox" id="toggle-table">
+            <label for="toggle-table">
+                <h1>Klik Untuk Melihat Jadwal Kuliah</h1>
+            </label>
+            <div class="tabel" id="sem-3">
+                <table border="1" align="center">
+                    <tr align="center">
+                        <th>Senin</th>
+                        <th>Selasa</th>
+                        <th>Rabu</th>
+                        <th>Kamis</th>
+                        <th>Jumat</th>
+                        <th>Sabtu</th>
+                        <th>Minggu</th>
+                    </tr>
+                    
+                    <tr>            
+                        <td>Kosong</td>
+                        <td>08.00 - 09.40 (Basic Speaking)</td>
+                        <td>08.00 - 10.30 (Pemrograman Web)</td>             
+                        <td>Kosong</td>
+                        <td>08.00 - 09.40 (Wirausaha Digital)</td>
+                        <td colspan="2">Kosong</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>11.00 - 12.40 (Lab Pemrograman Web)</td>
+                        <td>10.30 - 12.10 (Linguistik Forensik)</td>
+                        <td>Kosong</td>
+                        <td>10.30 - 13.00 (Struktur Data)</td>
+                        <td>10.40 - 12.20 (Lab Basis Data)</td>
+                        <td colspan="2">Kosong</td>
+                    </tr>
+                    
+                    <tr>
+                        <td colspan="2">Kosong</td>
+                        <td>13.00 - 15.30 (Basis Data)</td>
+                        <td>Kosong</td>
+                        <td>13.50 - 15.30 (Lab Struktur Data)</td>
+                        <td colspan="2">Kosong</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
